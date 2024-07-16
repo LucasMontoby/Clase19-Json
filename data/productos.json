@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "marca": "Ford",
+        "modelo": "Fiesta",
+        "precio": 10000000
+    },
+    {
+        "id": 2,
+        "marca": "Ford",
+        "modelo": "Focus",
+        "precio": 20000000
+    },
+    {
+         "id": 3,
+        "marca": "Ford",
+        "modelo": "Mustang",
+        "precio": 30000000
+    },
+    {
+        "id": 4,
+        "marca": "Ford",
+        "modelo": "Explorer",
+        "precio": 40000000
+    }
+]

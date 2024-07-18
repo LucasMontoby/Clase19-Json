@@ -22,17 +22,25 @@
     <main>
         <h2>Productos</h2>
         <ul>
+            <li>
             <% productos.forEach(producto => { %>
-                <li>
+              
                     <div><%= producto.marca %></div>
                     <div><%= producto.modelo %></div>
                     <div><%= producto.precio %></div>
-                </li>
-          <%  }) %>
-        
+            
+            <div class="form-container">
+                <a href="/<%=producto.id%>/edit">Editar</a>
+            </div>
+                
+            </li>
+        <%  }) %>
         </ul>
-
     </main>
+
+    <div class="form-container">
+        <a href="/create">Creación de Vehículos</a>
+    </div>
 
     <footer>
         <p>Copyright &copy; 2024</p>

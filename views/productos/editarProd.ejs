@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+</head>
+<body>
+    <h1>Editar Producto</h1>
+    <form action="/<%=producto.id%>?_method=PUT" method="POST">
+        <!-- <input type="hidden" name="_method" value="PUT"> -->
+        <div>
+            <label for="marca">Marca: </label>
+            <input type="text" name="marca" id="marca" value="<%=producto.marca%>" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="modelo">Modelo: </label>
+            <input type="text" name="modelo" id="modelo" value="<%=producto.modelo%>" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="precio">Precio: </label>
+            <input type="number" name="precio" id="precio" value="<%=producto.precio%>" required>
+        </div>
+        <br>
+        <div>
+            <button type="submit">Actualizar Vehículo</button>
+        </div>
+    </form>
+</body>
+</html>

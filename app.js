@@ -3,14 +3,16 @@ const app = express();
 const bodyParser = require('body-parser');
 const path = require('path');
 const methodOverride = require('method-override');
-
-const routerProducto = require('./router/productoRouter');
-app.use("/", routerProducto);
+app.use(methodOverride('_method'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(methodOverride('_method'));
+
+const routerProducto = require('./router/productoRouter');
+app.use("/", routerProducto);
+
+
 
 // app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));

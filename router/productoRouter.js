@@ -3,4 +3,10 @@ const productoController = require("../controller/productosController");
 
 router.get("/", productoController.list);
 
+router.get("/create", productoController.create);
+router.post("/create", productoController.stock);
+
+router.get("/:id/edit", productoController.edit);
+router.put("/:id", productoController.update);
+
 module.exports = router;

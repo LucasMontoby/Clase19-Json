@@ -64,7 +64,36 @@ const productosController = {
     } else{
         res.status(404).send("Producto no encontrado");
     }
-}
-}
+    },
+    delete: (req, res) => {
+        const id = req.params.id;
+        const producto = productos.find(producto => producto.id == id);
+        if(producto){
+            res.render('productos/eliminarProd', {producto});
+        }
+        else{
+            res.status(404).send("Producto no encontrado");
+            }
+    
+    },
+    destroy: (req, res) => {
+        const id = req.params.id;
+        const productoEliminar = productos.findIndex(producto => producto.id == id);
+        if(productoEliminar !== -1){
+            productos.splice(productoEliminar, 1);
+            try{
+                fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, " "));
+                res.redirect('/');
+                }
+                catch(error){
+                    console.log("Error al guardar el producto");
+                    console.error(error)
+                    res.status(500).send("Error al guardar el producto en el servidor")
+                    }
+                    } else{
+                        res.status(404).send("Producto no encontrado");
+                        }
+    }
 
+}
 module.exports = productosController;

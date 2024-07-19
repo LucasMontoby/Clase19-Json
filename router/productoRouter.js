@@ -9,4 +9,7 @@ router.post("/create", productoController.stock);
 router.get("/:id/edit", productoController.edit);
 router.put("/:id", productoController.update);
 
+router.get("/:id/delete", productoController.delete);
+router.delete("/:id", productoController.destroy);
+
 module.exports = router;

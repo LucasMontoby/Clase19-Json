@@ -16,29 +16,5 @@
   "marca": "Ford",
   "modelo": "Mustang",
   "precio": 30000000
- },
- {
-  "id": 4,
-  "marca": "Ford",
-  "modelo": "Explorer",
-  "precio": 40000000
- },
- {
-  "id": 5,
-  "marca": "Chevrolet",
-  "modelo": "Corsa",
-  "precio": "100"
- },
- {
-  "id": 6,
-  "marca": "Chrevrolet",
-  "modelo": "Spin",
-  "precio": "55000000"
- },
- {
-  "id": 7,
-  "marca": "Chery2",
-  "modelo": "Tiggo",
-  "precio": "30000000"
  }
 ]

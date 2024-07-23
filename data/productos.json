@@ -3,18 +3,28 @@
   "id": 1,
   "marca": "Ford",
   "modelo": "Fiesta",
-  "precio": 10000000
+  "precio": 10000000,
+  "imagen": "ford_fiesta_1.jpg"
  },
  {
   "id": 2,
   "marca": "Ford",
   "modelo": "Focus",
-  "precio": 20000000
+  "precio": 20000000,
+  "imagen": "ford_fiesta_1.jpg"
  },
  {
   "id": 3,
   "marca": "Ford",
   "modelo": "Mustang",
-  "precio": 30000000
+  "precio": "30000000",
+  "imagen": "ford_fiesta_1.jpg"
+ },
+ {
+  "id": 4,
+  "marca": "Chevrolet",
+  "modelo": "Corsa",
+  "precio": "1000000",
+  "imagen": "1721772994296-Chrevrolet_corsa_1.jpg"
  }
 ]

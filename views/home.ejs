@@ -7,27 +7,17 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Home</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Usuario</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+   
+    <%- include('partials/header') %>
     <main>
         <h2>Productos</h2>
-        <ul>
-            <li>
+        <ul class="producto-lista">
             <% productos.forEach(producto => { %>
+            <li>
+                <img src="/images/<%=producto.imagen%>" alt="<%= producto.marca %> <%= producto.modelo %>">
               
-                    <div><%= producto.marca %></div>
-                    <div><%= producto.modelo %></div>
-                    <div><%= producto.precio %></div>
+                    <h2><%= producto.marca %> <%= producto.modelo %></h2>
+                    <div>Precio: $<%= producto.precio %></div>
             
             <div class="form-container">
                 <a href="/<%=producto.id%>/edit">Editar</a>
@@ -44,8 +34,7 @@
         <a href="/create">Creación de Vehículos</a>
     </div>
 
-    <footer>
-        <p>Copyright &copy; 2024</p>
-    </footer>
+    <%- include('partials/footer') %>
+   
 </body>
 </html>

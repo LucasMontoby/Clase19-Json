@@ -6,6 +6,7 @@
     <title>Eliminar Producto</title>
 </head>
 <body>
+    <%- include('../partials/header') %>
     <h1>Eliminar Producto</h1>
     <p>¿Estas seguro de que deseas eliminar el producto <%= producto.marca %> <%= producto.modelo %>?</p>
     <form  action="/<%=producto.id%>?_method=DELETE" method="POST">
@@ -13,5 +14,7 @@
     </form> 
 
     <a href="/">Cancelar</a>
+
+    <%- include('../partials/footer') %>
 </body>
 </html>

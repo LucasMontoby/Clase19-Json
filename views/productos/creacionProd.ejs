@@ -6,30 +6,41 @@
     <title>Create</title>
 </head>
 <body>
-    <form action="/create" method="POST">
+    <%- include('../partials/header') %>
+
+    <form action="/create" method="POST" enctype="multipart/form-data">
         <div>
             <label for="marca">Marca: </label>
-            <input type="text" name="marca" id="marca" placeholder="Ingresa la Marca">
+            <input type="text" name="marca" id="marca" placeholder="Ingresa la Marca" required>
         </div>
         <br>
 
         <div>
             <label for="modelo">Modelo: </label>
-            <input type="text" name="modelo" id="modelo" placeholder="Ingresa el Modelo">
+            <input type="text" name="modelo" id="modelo" placeholder="Ingresa el Modelo" required>
         </div>
         <br>
 
         <div>
             <label for="precio">Precio: </label>
-            <input type="number" name="precio" id="precio" placeholder="Ingresa el Precio">
+            <input type="number" name="precio" id="precio" placeholder="Ingresa el Precio" required>
         </div>
         <br>
+
         <div>
-            <button type="submit" value="Guardar Producto">Crear Vehículo</button>
+            <label for="imagen">Imagen: </label>
+            <input type="file" name="imagen" id="imagen" required>
+        </div>
+        <br>
+
+        <div>
+            <button type="submit">Crear Vehículo</button>
         </div>
     </form>
     <div>
         <a href="/">Volver a Home</a>
     </div>
+
+    <%- include('../partials/footer') %>
 </body>
 </html>
